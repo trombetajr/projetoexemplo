@@ -1,0 +1,6 @@
+#!/bin/bash
+data=`date +%F -d "1 days ago"`  
+echo $data
+echo "copiando arquivos"
+
+find /bvs/abradisti/arquivos -type f -newermt $data -exec cp -a {} /tmp/ \;
